@@ -10,9 +10,10 @@ $colorSecundario: white;
 html,
 body,
 #root {
-  height: 100vh;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   align-items: center;
+  
 }
 
 header {
@@ -20,17 +21,23 @@ header {
   padding: 20px;
 
   nav {
+    h1 {
+      padding:20px;
+    }
+    ul {
       a {
-          color: black;
-          text-decoration: none;
-      }
+        color: black;
+        text-decoration: none;
+        margin: 20px;
+        line-height: 1em;
+     }
+
+    }
   }
 }
 
 main {
   background-color: gray;
-  height: 100vh;
-  
 }
 
 footer {
@@ -39,16 +46,15 @@ footer {
 }
 
 #presentacion {
+  height: 100vh;
   color: white;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  
   h1 {
-    padding:20px;
+    padding:30px;
   }
   h2 {
-    padding:20px;
+    padding:15px;
   }
   P {
-    padding:20px;
+    padding:15px;
   }
 }

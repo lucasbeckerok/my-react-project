@@ -1,10 +1,11 @@
 const NavBar = () => {
     return (
         <nav>
+            <h1>Hanno | Tienda Online</h1>
             <ul>
-                <a>Link 1</a>
-                <a>Link 2</a>
-                <a>Link 3</a>
+                <a>Inicio</a>
+                <a>Tienda</a>
+                <a>Contacto</a>
             </ul>
         </nav>
     )
