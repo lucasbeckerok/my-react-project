@@ -1,0 +1,12 @@
+COMPONENTES:
+1- Todos los componentes son funciones
+2- Todos los componentes arrancan con mayusculas
+3- Todos los componentes tienen que retornar un elemento
+4- Todos los componentes pueden recibir n cantidad de props de cualquier valor
+5- Todos los componentes pueden tener estado y ciclo de vida
+
+CLASS: props + state + lifecycle
+HOOK : Gancho - son funciones que adaptan un componente funcional a que tenga funcionales que antes no tenia.
+
+- useState
+- useEffect
