@@ -1,10 +1,7 @@
-import {useState} from 'react'
+import {useState} from 'react';
+import {Button} from 'react-bootstrap';
 
 const Main = (props) => {
-
-    // const resultado = useState(); // Siempre retorna un array con dos elementos
-
-    // let contador = 0
 
     const [contador, setContador] = useState(props.initial);
 
@@ -14,7 +11,6 @@ const Main = (props) => {
     const restar = () => {
         setContador(contador - 1)
     }
-
     const resetear = () => {
         setContador(0)
     }
@@ -24,8 +20,9 @@ const Main = (props) => {
         <div id="presentacion">
             <h1>bienvenido {props.nombre} {props.apellido} a la tienda e-commerce</h1>
             <h2>Mi contador actual: {contador}</h2>
-            <button onClick={handleclick}>Aumentar</button>
-            <button onClick={restar}>restar</button>
+            <Button variant="primary" onClick={handleclick}>Aumentar</Button>
+            <Button variant="primary" onClick={restar}>restar</Button>
+            <Button variant="primary" onClick={resetear}>Reiniciar</Button>
         </div>
     </main>
     )
