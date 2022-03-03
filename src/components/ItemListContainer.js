@@ -1,7 +1,9 @@
-function ItemListContainer() {
-    return (
-    <p>Incluye aquí el rendering de algún texto o título provisional que luego reemplazaremos por nuestro catálogo</p>
-    )
-  }
+
+function ItemListContainer(props) {
+  return (
+    <h2>Aqui va el texto props: {props.greeting}</h2>
+  )
+
+}
 
 export default ItemListContainer;

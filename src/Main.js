@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Button} from 'react-bootstrap';
+import Contador from './components/Contador';
 
 const Main = (props) => {
 
@@ -23,9 +24,32 @@ const Main = (props) => {
             <Button variant="primary" onClick={handleclick}>Aumentar</Button>
             <Button variant="primary" onClick={restar}>restar</Button>
             <Button variant="primary" onClick={resetear}>Reiniciar</Button>
+            <Contador/>
         </div>
     </main>
     )
 }
 
 export default Main;
+
+
+// const Main = (props) => {
+
+//     const [loading,setLoading] = useState(true)
+//     const [productos, setProductos] = useState([])
+
+//     useEffect(()=> {
+//         setTimeout(()=>{
+//             setProductos(productosIniciales)
+//             setLoading(false)
+//         },3000)
+//     })
+
+//     console.log(productos)
+
+//     return(
+//         <main className="container"></main>
+//     )
+// }
+
+// export default Main;
