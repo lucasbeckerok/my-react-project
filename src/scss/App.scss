@@ -1,7 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
 
 $colorPrimario: orange;
-$colorSecundario: white;
+$colorSecundario: blue;
 
 * {
   margin: 0;
@@ -15,28 +15,9 @@ body,
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   align-items: center;
-  
-}
-
-main {
-  background-color:cornflowerblue;
 }
 
 footer {
   background-color: $colorPrimario;
   padding: 20px;
-}
-
-#presentacion {
-  height: 100vh;
-  color: white;
-  h1 {
-    padding:30px;
-  }
-  h2 {
-    padding:15px;
-  }
-  P {
-    padding:15px;
-  }
 }

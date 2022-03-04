@@ -1,20 +1,26 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
-const Contador = () => {
+const Contador = (props) => {
 
-    let [dark, setDark] = useState(false);
+    const [contador, setContador] = useState(props.initial);
 
-    const toggleDarkMode = () => {
-        setDark(!dark)
+    const handleclick = () => {
+        setContador(contador + 1)
     }
-    console.log(dark);
-    
+    const restar = () => {
+        setContador(contador - 1)
+    }
+    const resetear = () => {
+        setContador(0)
+    }
+
     return (
         <div>
-            <h1>Contador</h1>
-            <p>El tema del sitio es: {dark.toString()}</p>
-            <Button onClick={toggleDarkMode}>toggle dark mode</Button>
+            <h4>Agregar al carrito: {contador}</h4>
+            <Button variant="primary" onClick={handleclick}>Aumentar</Button>
+            <Button variant="primary" onClick={restar}>restar</Button>
+            <Button variant="primary" onClick={resetear}>Reiniciar</Button>
         </div>
     )
 }

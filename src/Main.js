@@ -1,30 +1,23 @@
-import {useEffect, useState} from 'react';
-import {Button} from 'react-bootstrap';
-import Contador from './components/Contador';
+import ContadorCard from './components/Card';
+import DarkMode from './components/DarkToggle';
+import Slider from './components/Slider';
+import { Fragment } from 'react';
+import '../src/scss/App.scss';
+import ItemListContainer from './components/ItemListContainer';
 
-const Main = (props) => {
-
-    const [contador, setContador] = useState(props.initial);
-
-    const handleclick = () => {
-        setContador(contador + 1)
-    }
-    const restar = () => {
-        setContador(contador - 1)
-    }
-    const resetear = () => {
-        setContador(0)
-    }
+const Main = () => {
 
     return (
     <main>
+        <Fragment className="App">
+                <ItemListContainer greeting="Proximamente mas productos!"/>
+        </Fragment>
         <div id="presentacion">
-            <h1>bienvenido {props.nombre} {props.apellido} a la tienda e-commerce</h1>
-            <h2>Mi contador actual: {contador}</h2>
-            <Button variant="primary" onClick={handleclick}>Aumentar</Button>
-            <Button variant="primary" onClick={restar}>restar</Button>
-            <Button variant="primary" onClick={resetear}>Reiniciar</Button>
-            <Contador/>
+            <Slider/>
+        </div>
+        <div>
+            <ContadorCard/>
+            <DarkMode/>
         </div>
     </main>
     )

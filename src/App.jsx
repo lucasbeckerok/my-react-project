@@ -4,7 +4,6 @@ import Footer from "./Footer"
 //----
 import { Fragment } from 'react';
 import '../src/scss/App.scss';
-import ItemListContainer from './components/ItemListContainer';
 
 function App() {
 
@@ -14,9 +13,6 @@ function App() {
     return (
         <>
             <Header main="main-header"/>
-            <Fragment className="App">
-                <ItemListContainer greeting="Proximamente nuevos productos" />
-            </Fragment> 
             <Main main="main-body" className={edad} className={nombre} initial={0}/>
             <Footer footer="main-footer"/>
         </>

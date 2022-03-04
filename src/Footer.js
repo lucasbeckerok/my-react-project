@@ -2,7 +2,18 @@ const Footer = () => {
     
     return (
         <footer>
-            <h2>Soy un Footer</h2>
+            <h1>Footer</h1>
+            <ul>
+                <li>
+                    email: empresa@ecommerce.com
+                </li>
+                <li>
+                    phone: +5429468135
+                </li>
+                <li>
+                    Virginia, EEUU
+                </li>
+            </ul>
         </footer>
     )
 }
