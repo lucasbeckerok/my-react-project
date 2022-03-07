@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap";
 
 
 const Item = (props) => {
-  
+
     return (
         <Card 
           style={{ width: '18rem' }}
@@ -13,6 +13,7 @@ const Item = (props) => {
           <Card.Body>
              <Card.Title>{props.name}</Card.Title>
               <Card.Text>
+                <p>Contenido: {props.descripcion}</p>
                 <p>Stock: {props.stock}</p>
                 <ItemCount stock={props.stock}/>
              </Card.Text>
