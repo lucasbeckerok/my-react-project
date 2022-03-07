@@ -1,4 +1,3 @@
-import ContadorCard from './components/Card';
 import DarkMode from './components/DarkToggle';
 import Slider from './components/Slider';
 import { Fragment } from 'react';
@@ -9,14 +8,13 @@ const Main = () => {
 
     return (
     <main>
-        <Fragment className="App">
-                <ItemListContainer greeting="Proximamente mas productos!"/>
-        </Fragment>
         <div id="presentacion">
             <Slider/>
         </div>
+        <Fragment className="App">
+                <ItemListContainer greeting="Proximamente mas productos!"/>
+        </Fragment>
         <div>
-            <ContadorCard/>
             <DarkMode/>
         </div>
     </main>
@@ -24,25 +22,3 @@ const Main = () => {
 }
 
 export default Main;
-
-
-// const Main = (props) => {
-
-//     const [loading,setLoading] = useState(true)
-//     const [productos, setProductos] = useState([])
-
-//     useEffect(()=> {
-//         setTimeout(()=>{
-//             setProductos(productosIniciales)
-//             setLoading(false)
-//         },3000)
-//     })
-
-//     console.log(productos)
-
-//     return(
-//         <main className="container"></main>
-//     )
-// }
-
-// export default Main;

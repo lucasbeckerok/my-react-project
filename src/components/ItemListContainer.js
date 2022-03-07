@@ -1,7 +1,12 @@
+import ItemList from './ItemList';
 
-function ItemListContainer(props) {
-  return (
-    <h2>Bienvenido: {props.greeting}</h2>
+const ItemListContainer = (props) => {
+    return (
+      <>
+      <div id="itemStoreContainer">
+        <ItemList/>
+      </div>
+      </>
   )
 }
 

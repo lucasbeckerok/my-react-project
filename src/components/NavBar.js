@@ -3,12 +3,13 @@ import {Navbar, Container, Nav, NavDropdown} from 'react-bootstrap';
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="lg">
+    <>
+        <Navbar bg="light" expand="lg" className="justify-content-center">
         <Container>
           <Navbar.Brand href="#home">Hanno Tienda Ecommerce</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto my-2 my-lg-0">
               <Nav.Link href="#home">Inicio</Nav.Link>
               <Nav.Link href="#link">Contacto</Nav.Link>
               <NavDropdown title="Tienda" id="basic-nav-dropdown">
@@ -23,6 +24,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+    </>
     )
 }
 
