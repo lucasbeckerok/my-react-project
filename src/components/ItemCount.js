@@ -16,14 +16,11 @@ const ItemCount = (props) => {
             setContador(0)
         }
     }
-
     const resetear = () => {
         setContador(0)
     }
-
     const addOn = () => {
     }
-
     return (
         <div id="contador">
             <Button variant="primary" onClick={restar}>-</Button>
