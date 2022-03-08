@@ -8,13 +8,12 @@ const DarkMode = () => {
     const toggleDarkMode = () => {
         setDark(!dark)
     }
-    console.log(dark);
-
+    // console.log(dark);
     return (
         <div>
-            <h5>Dark Mode</h5>
-            <p>Activado ? = {dark.toString()}</p>
-            <Button onClick={toggleDarkMode}>Dark Mode</Button>
+            <h6>Dark Mode</h6>
+            <p>Activado? = {dark.toString()}</p>
+            <Button onClick={toggleDarkMode}>Activar/Desactivar</Button>
         </div>
     )
 }
