@@ -1,4 +1,3 @@
-import { isDisabled } from "@testing-library/user-event/dist/utils";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
 
@@ -11,19 +10,18 @@ const ItemCount = (props) => {
         setContador(contador + 1)
         }
     }
-
     const restar = () => {
         setContador(contador - 1)
         if (contador < 1) {
             setContador(0)
         }
     }
+
     const resetear = () => {
         setContador(0)
     }
 
     const addOn = () => {
-
     }
 
     return (

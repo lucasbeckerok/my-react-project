@@ -114,6 +114,7 @@ function foo(){
 foo()
 foo()
 
+PROMESAS:
 
 $.ajax().then().catch()
 
@@ -122,3 +123,52 @@ fetch().then().catch()
 otraFuncionRandom().then().catch()
 
 leerElCache().then().catch()
+
+AJAX: Async Javascript and XML. (XHR y Fetch son Ajax)
+
+XHR (XMLHttpRequest) : XMLHttpRequest es una clave de objeto que nos permite hacer peticiones a un servidor usando el protocolo HTTP.
+
+CALLBACK OF HELL : Pyramid of doom :
+**funcion de ejemplo**
+const usuarios = hacerPedido((usuarios)=>{
+    const posteos = hacerPedido((posteos)=>{
+        const comentarios = hacerPedido((comentarios)=>{
+            console.log(usuarios,posteos,comentarios)
+        })
+    })
+})
+
+$.ajax() : Es la implementacion de jquery para XHR
+
+FETCH : Es la nueva implementacion de XHR + Promise
+
+FTP / TCP - IP / HTTPS / SSH / SMTP / POP / IMAP
+HTTP : HyperText Transfer Protocol
+
+
+CLIENTE / REQUEST
+
+IP / URL - METODO / VERBO (get - post - put - patch - delete, etc...)
+HEADER
+
+    Accept : un header que te sirve para configurar el tipo de contenido que quieres que te devuelva el servidor.
+
+BODY / PAYLOAD : Es el cuerpo de la peticion que se envia al servidor
+
+
+SERVIDOR / RESPONSE
+
+CODIGO - MENSAJE
+1xx : Informacion
+
+2XX : Exito
+
+3XX : Redireccion
+302 - 304
+
+4xx : error del CLIENTE
+404 - 400 - 403 - 401 - 405
+
+5xx : error servidor
+
+BODY

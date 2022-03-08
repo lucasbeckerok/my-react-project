@@ -9,18 +9,22 @@ let productsInitial = [
 ]
 
 const ItemList = () => {
-
+    
+    const [loading, setLoading] = useState(true);
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
         setTimeout(() => {
             setProducts(productsInitial);
-        }, 1000)}, []);
+            setLoading(false);
+        }, 3000)}, []);
 
     return (
         <>
-            {products.map((product) => {
-                return <Item name={product.name} descripcion={product.descripcion} price={product.price} stock={product.stock} img={product.img}/>
+            <h2>{loading && "cargando...."}</h2>
+
+            {products.map((product, indice) => {
+                return <Item key={indice} name={product.name} descripcion={product.descripcion} price={product.price} stock={product.stock} img={product.img}/>
             })}
         </>
     )
