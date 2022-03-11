@@ -21,11 +21,12 @@ const ItemList = () => {
 
     return (
         <>
+        
             <h2>{loading && "cargando...."}</h2>
-
             {products.map((product, indice) => {
                 return <Item key={indice} name={product.name} descripcion={product.descripcion} price={product.price} stock={product.stock} img={product.img}/>
             })}
+        
         </>
     )
 }

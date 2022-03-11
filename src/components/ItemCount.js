@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Button } from "react-bootstrap";
 
 const ItemCount = (props) => {
 
@@ -23,11 +22,11 @@ const ItemCount = (props) => {
     }
     return (
         <div id="contador">
-            <Button variant="primary" onClick={restar}>-</Button>
+            <button  onClick={restar}>-</button>
             <h4>{contador}</h4>
-            <Button variant="primary" onClick={sumar}>+</Button>
-            <Button variant="primary" onClick={addOn}>Agregar al Carrito</Button>
-            <Button variant="secondary" onClick={resetear}>Restablecer</Button>
+            <button onClick={sumar}>+</button>
+            <button onClick={addOn}>Agregar al Carrito</button>
+            <button onClick={resetear}>Restablecer</button>
         </div>
     )
 }

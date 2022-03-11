@@ -1,5 +1,3 @@
-@import "~bootstrap/scss/bootstrap";
-
 $colorPrimario: orange;
 $colorSecundario: blue;
 
@@ -22,8 +20,12 @@ h1, h2, h3 {
 }
 
 footer {
-  background-color: $colorPrimario;
-  padding: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }
 
 #itemStore {
@@ -37,3 +39,44 @@ footer {
 #contador {
   display:flex;
 }
+
+//navBar
+.navBar {
+  ul {
+    list-style-type:none;
+    margin:1px;
+    padding: 1px;
+    overflow:hidden;
+    background-color:$colorPrimario;
+    li {
+      float: left;
+      a {
+        display:block;
+        color:white;
+        text-align: left;
+        padding:15px 17px;
+        text-decoration:none;
+      }
+      a:hover{
+        background-color:$colorSecundario;
+      }
+    }
+  }
+}
+.carritoWidget {
+  margin:10px;
+  float: right;
+}
+
+///ARTICULOS
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+.card {
+  flex: 0 0 200px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+} 
