@@ -1,6 +1,6 @@
 
 import React from "react";
-import DarkToggle from "./components/DarkToggle";
+import DarkToggle from "../widgets/DarkToggle";
 
 const Footer = () => {
   return(

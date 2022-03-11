@@ -1,5 +1,5 @@
-import ItemListContainer from './components/ItemListContainer'
-import '../src/scss/App.scss';
+import ItemListContainer from '../pages/ItemListContainer'
+import '../scss/App.scss';
 
 const Main = () => {
 
