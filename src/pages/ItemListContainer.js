@@ -15,14 +15,22 @@ const ItemListContainer = () => {
 
     useEffect(() => {
 
-      setTimeout(() => {
+      const productPromise = new Promise((res,rej) => {
 
-        setProducts(productsInitial);
+        setTimeout(() => {
+  
+          res(productsInitial);
+  
+          }, 2000)
+  
+      },)
 
-        setLoading(false);
-
-        }, 2000)
-        
+      productPromise
+      .then((data) => setProducts(data))
+      .catch((error) => console.log(error))
+      .finally(() => {
+          setLoading(false);
+        })
       })
 
     return (
