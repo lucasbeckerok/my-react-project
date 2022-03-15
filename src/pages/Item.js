@@ -9,9 +9,8 @@ const Item = (props) => {
          <div className="text">
            <h4>{props.name}</h4>
             <p>Contenido: {props.descripcion}
-                Stock: {props.stock}
-              <ItemCount stock={props.stock}/>
-            </p>
+                Stock: {props.stock}</p>
+              <ItemCount stock={props.stock} id={props.id}/>
          </div>
       </article>
     )

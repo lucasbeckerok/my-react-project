@@ -1,5 +1,6 @@
-$colorPrimario: orange;
-$colorSecundario: blue;
+$colorPrimario: #FF8D01;
+$colorSecundario: white;
+$colorTerciario: #DB00FA;
 
 * {
   margin: 0;
@@ -10,6 +11,7 @@ $colorSecundario: blue;
 html,
 body,
 #root {
+  overflow-x: hidden;
   font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   align-items: center;
@@ -18,12 +20,17 @@ body,
 h1, h2, h3 {
   margin: 20px;
 }
+main {
+  padding:5px;
+}
 
 footer {
+  padding-bottom: 15px;
+  padding-top:2px;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: red;
+  background-color: $colorPrimario;
   color: white;
   text-align: center;
 }
@@ -44,16 +51,14 @@ footer {
 .navBar {
   ul {
     list-style-type:none;
-    margin:1px;
-    padding: 1px;
     overflow:hidden;
     background-color:$colorPrimario;
     li {
       float: left;
       a {
         display:block;
-        color:white;
-        text-align: left;
+        color: black;
+        text-align: center;
         padding:15px 17px;
         text-decoration:none;
       }
@@ -82,5 +87,16 @@ footer {
 } 
 
 button {
+  background-color:$colorTerciario;
+  color: $colorSecundario;
   padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px;
+
+}
+
+#containerDarkToggle {
+  padding:10px;
+  background-color:darkgray;
 }

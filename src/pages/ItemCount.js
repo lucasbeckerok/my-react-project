@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from 'react-router-dom'
+
 
 const ItemCount = (props) => {
 
@@ -15,19 +17,19 @@ const ItemCount = (props) => {
             setContador(0)
         }
     }
-    const resetear = () => {
-        setContador(0)
-    }
     const addOn = () => {
     }
+
     return (
-        <div id="contador">
-            <button  onClick={restar}>-</button>
-            <h4>{contador}</h4>
-            <button onClick={sumar}>+</button>
-            <button onClick={addOn}>Agregar al Carrito</button>
-            <button onClick={resetear}>Restablecer</button>
+        <>
+        <div id="contador" className="row">
+            <button onClick={restar} className="col-3">-</button>
+            <div className="col-3">{contador}</div>
+            <button onClick={sumar} className="col-3">+</button>
+            <button onClick={addOn} className="col-3">Agregar al Carrito</button> 
         </div>
+        {/* <Link to="/item/:id"><button>Ver Detalles</button></Link> */}
+        </>
     )
 }
 
