@@ -8,26 +8,28 @@ import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
 
-    const [loading, setLoading] = useState();
+    const [loading, setLoading] = useState(true);
     const [object, setObjet] = useState([]);
     const [error, setError] = useState(false);
     const { id } = useParams();
 
+    const productPromise = new Promise((res,rej) => {
+  
+      setTimeout(() => {
+
+        res(productsInitial);
+
+        }, 2500)
+
+    },)
+
+
     useEffect(() => {
 
-        const productPromise = new Promise((res,rej) => {
-  
-          setTimeout(() => {
-    
-            res(productsInitial);
-    
-            }, 2500)
-    
-        },)
-  
+        
         productPromise
         .then((res) => {
-            let detalleItem = productsInitial.find(product => {
+            let detalleItem = res.find(product => {
                 return product.id === id;
             })
             setObjet(detalleItem);
