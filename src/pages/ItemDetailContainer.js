@@ -16,9 +16,7 @@ const ItemDetailContainer = () => {
     const productPromise = new Promise((res,rej) => {
   
       setTimeout(() => {
-
         res(productsInitial);
-
         }, 2500)
 
     },)
@@ -26,7 +24,6 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
 
-        
         productPromise
         .then((res) => {
             let detalleItem = res.find(product => {

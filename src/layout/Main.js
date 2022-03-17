@@ -1,13 +1,20 @@
 import ItemListContainer from '../pages/ItemListContainer'
 import '../scss/App.scss';
 import ItemDetailContainer from '../pages/ItemDetailContainer';
+import { Route , Routes } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Main = () => {
 
     return (
     <main>
-        <ItemListContainer/>
-        {/* <ItemDetailContainer/> */}
+        <Routes>
+            <Route path="/" element={<ItemListContainer />} />
+            <Route path="/item/:id" element={<ItemDetailContainer />} />
+        </Routes>
+        <ToastContainer position="bottom-right" />
     </main>
     )
 }

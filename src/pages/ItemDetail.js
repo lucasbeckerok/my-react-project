@@ -1,17 +1,17 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 
-const ItemDetail = (props) => {
+const ItemDetail = ({ object = {} }) => {
+
   return (
     <article className="card">
-        <img src={props.object.img} alt="Sample photo"></img>
-         <div className="text">
-           <h4>{props.object.name}</h4>
-            <p>Contenido: {props.object.descripcion}
-                Stock: {props.object.stock}
-              <ItemCount stock={props.object.stock}/>
-            </p>
+        <img src={object.img} alt="Sample photo"></img>
+        <div className="text">
+          <h4>{object.name}</h4>
+            <p>Contenido: {object.descripcion}
+                Stock: {object.stock}</p> 
         </div>
+        <ItemCount stock={object.stock}/>
     </article>
   )
 }
