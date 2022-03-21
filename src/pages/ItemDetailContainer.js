@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
     const [loading, setLoading] = useState(true);
     const [object, setObjet] = useState([]);
     const [error, setError] = useState(false);
-    const { id } = useParams();
+    const { id } = useParams();    
 
     const productPromise = new Promise((res,rej) => {
   
@@ -21,13 +21,12 @@ const ItemDetailContainer = () => {
 
     },)
 
-
     useEffect(() => {
 
         productPromise
         .then((res) => {
             let detalleItem = res.find(product => {
-                return product.id === id;
+                return product.id == id;
             })
             setObjet(detalleItem);
         })
@@ -38,14 +37,13 @@ const ItemDetailContainer = () => {
         .finally(() => {
             setLoading(false);
           })
-
-
+          
         },[])
 
   return (
     <>
     <div>
-    {loading ? <h2>Cargando Productos... Por favor aguarde</h2> : <div className="cards"><ItemDetail object={object} /></div>}
+    {loading ? <h2>Cargando Detalle del Producto...</h2> : <div><ItemDetail object={object} /></div>}
     {error && <h2>Ocurrio un error al cargar la pagina, por favor intente mas tarde</h2>}
     </div>
     </>

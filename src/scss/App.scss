@@ -20,6 +20,9 @@ body,
 h1, h2, h3 {
   margin: 20px;
 }
+p {
+  margin:5px;
+}
 main {
   padding:5px;
 }
@@ -99,4 +102,30 @@ button {
 #containerDarkToggle {
   padding:10px;
   background-color:darkgray;
+}
+
+img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.container_itemDetail { display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.3fr 1.7fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "itemDetail__titulo itemDetail__titulo"
+    "itemDetail__img itemDetail__descripcion";
+
+} .itemDetail__titulo { grid-area: itemDetail__titulo;
+
+} .itemDetail__img { grid-area: itemDetail__img;
+  text-align:right;
+  margin:20px;
+
+} .itemDetail__descripcion { grid-area: itemDetail__descripcion;
+  text-align: left;
+  margin: 50px 0px 0px 20px;
+  
 }
