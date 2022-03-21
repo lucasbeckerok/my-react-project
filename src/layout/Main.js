@@ -13,8 +13,6 @@ const Main = () => {
         <Routes>
             <Route path="/" element={<ItemListContainer />} />
             <Route path="/categoria/:categoria" element={<ItemListContainer />} />
-            <Route path="/categoria/:chocolates" element={<ItemListContainer />} />
-            <Route path="/categoria/:cigarrillos" element={<ItemListContainer />} />
             <Route path="/item/:id" element={<ItemDetailContainer />} />
         </Routes>
         <ToastContainer position="bottom-right" />
