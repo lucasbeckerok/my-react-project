@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+
 $colorPrimario: #FF8D01;
 $colorSecundario: white;
 $colorTerciario: #DB00FA;
@@ -12,7 +14,7 @@ html,
 body,
 #root {
   overflow-x: hidden;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Fredoka', sans-serif;
   text-align: center;
   align-items: center;
 }
@@ -92,7 +94,7 @@ footer {
 button {
   background-color:$colorTerciario;
   color: $colorSecundario;
-  padding: 5px;
+  padding: 3px;
   border-radius: 5px;
   display: inline-block;
   margin: 5px;

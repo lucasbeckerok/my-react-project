@@ -18,7 +18,6 @@ const ItemDetailContainer = () => {
       setTimeout(() => {
         res(productsInitial);
         }, 2500)
-
     },)
 
     useEffect(() => {
@@ -43,7 +42,7 @@ const ItemDetailContainer = () => {
   return (
     <>
     <div>
-    {loading ? <h2>Cargando Detalle del Producto...</h2> : <div><ItemDetail object={object} /></div>}
+    {loading ? <h2>Cargando Detalle del Producto...</h2> : <ItemDetail object={object} />}
     {error && <h2>Ocurrio un error al cargar la pagina, por favor intente mas tarde</h2>}
     </div>
     </>

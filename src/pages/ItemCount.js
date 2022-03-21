@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ItemCount = (props) => {
 
-    const [contador, setContador] = useState(0);
+    const [contador, setContador] = useState(props.initial);
 
     const sumar = () => {
         if (contador < props.stock) {
@@ -15,7 +15,8 @@ const ItemCount = (props) => {
             setContador(0)
         }
     }
-    const addOn = () => {
+    const haddleAgregar = (e) => {
+        props.onAdd(contador)
     }
 
     return (
@@ -24,7 +25,7 @@ const ItemCount = (props) => {
             <button onClick={restar} className="col-3">-</button>
             <div className="col-3">{contador}</div>
             <button onClick={sumar} className="col-3">+</button>
-            <button onClick={addOn} className="col-3">Agregar al Carrito</button> 
+            <button onClick={haddleAgregar} className="col-3">Agregar al Carrito</button> 
         </div>
         </>
     )
