@@ -1,19 +1,21 @@
 import React from 'react';
 import ItemCount from './ItemCount';
-import { toast } from "react-toastify";
-import { useState } from "react";
-import CartWidget from "../widgets/CartWidget";
-import Cart from "./Cart";
+import { Link } from 'react-router-dom';
+import { useState , useContext } from "react";
+import { cartContext } from "../context/CartContext";
  
 const ItemDetail = (props) => {
 
-  const [agregado, setAgregado] = useState(false);
+  const [botonIrCarrito, setBotonIrCarrito] = useState(true);
+
+  const useCartContext = useContext(cartContext);
+  const { addToCart } = useCartContext;
   
-  const onAdd = (agregado) => {
-    if (agregado != undefined) {
-      setAgregado(true);
+  const onAdd = (contadorActivado) => {
+    if (contadorActivado != undefined) {
+      setBotonIrCarrito(false);
+      addToCart(props.object, contadorActivado);
     }
-    toast.success("Agregaste " + agregado + " producto/s a tu Carrito")
   }
 
   return (
@@ -28,7 +30,8 @@ const ItemDetail = (props) => {
         <p><strong>Contenido:</strong> {props.object.descripcion}</p>
         <p><strong>Cantidad disponible: </strong>{props.object.stock} u.</p>
         <p><strong>Precio: </strong>${props.object.price}</p>
-        {agregado ? <CartWidget/> : <ItemCount stock={props.object.stock} id={props.id} initial={1} onAdd={onAdd} /> }
+        <ItemCount stock={props.object.stock} id={props.id} initial={1} onAdd={onAdd} />
+        {botonIrCarrito || <Link to="/cart/"><button> 🛒 Ir al carrito</button></Link>}
       </div>
     </div>
   )

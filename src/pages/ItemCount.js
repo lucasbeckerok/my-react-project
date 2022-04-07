@@ -15,7 +15,7 @@ const ItemCount = (props) => {
             setContador(0)
         }
     }
-    const haddleAgregar = (e) => {
+    const addToCart = () => {
         props.onAdd(contador)
     }
 
@@ -25,7 +25,7 @@ const ItemCount = (props) => {
             <button onClick={restar} className="col-3">-</button>
             <div className="col-3">{contador}</div>
             <button onClick={sumar} className="col-3">+</button>
-            <button onClick={haddleAgregar} className="col-3">Agregar al Carrito</button> 
+            <button onClick={addToCart} className="col-3">Agregar al Carrito</button> 
         </div>
         </>
     )
