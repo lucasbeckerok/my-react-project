@@ -3,6 +3,7 @@ import ItemCount from './ItemCount';
 import { Link } from 'react-router-dom';
 import { useState , useContext } from "react";
 import { cartContext } from "../context/CartContext";
+
  
 const ItemDetail = (props) => {
 
@@ -27,6 +28,7 @@ const ItemDetail = (props) => {
       <img src={props.object.img} alt="Foto Producto Detalle"></img>
       </div>
       <div className="itemDetail__descripcion">
+        <button onClick={() => { window.history.go(-1) }} >Ir Atrás</button>
         <p><strong>Contenido:</strong> {props.object.descripcion}</p>
         <p><strong>Cantidad disponible: </strong>{props.object.stock} u.</p>
         <p><strong>Precio: </strong>${props.object.price}</p>
