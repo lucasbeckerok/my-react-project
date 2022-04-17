@@ -7,17 +7,17 @@ const { Provider } = cartContext;
 const CartProvider = ({ children }) => {
     const [cart, setCart] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
-    const [totalProductos, setTotalProductos] = useState(0);
+    const [totalProds, setTotalProds] = useState(0);
 
     useEffect(() => {
         setCart(cart)
         calcularTotal(cart);
     }, [cart]);
 
+    let cartAux = [];
     // addToCart
     const addToCart = (product, contador) => {
         const cartProduct = {product, contador}
-        let cartAux = [cart];
 
         if (isInCart(product)){
             cartProduct = product.find((item) => item.product === product);
@@ -38,37 +38,32 @@ const CartProvider = ({ children }) => {
             totalProds += item.contador;
         });
         setTotalPrice(totalPrice);
-        setTotalProductos(totalProds);
+        setTotalProds(totalProds);
     }
 
     //removeItem
-    const removeItem = (id) => {
-        setCart(cart.filter((item) => item.product.id !== id));      
+    const removeItem = (product) => {
+        if(isInCart(product)) {
+            cartAux = cart.filter(item => item.product.name !== product.name);
+            setCart(cartAux);
+            toast.info(`El producto ${product.name} se eliminó de tu carrito`);
+            if (cartAux.lenght === 0) {
+                clearCart();
+            }
+        }
     }
 
     //clearCart
     const clearCart = () => {
         setCart([]);
         setTotalPrice(0);
-        setTotalProductos(0);
+        setTotalProds(0);
     }
 
     //isInCart
     const isInCart = (product) => {
-        if (cart) {
-            cart.some((item) => item.product.id === product.id);
-        }
+        return cart && cart.some(item => item.product.id === product.id);
     };
-
-    //checkTotal
-    // const checkTotal = () => {
-    //     let totalAux = 0;
-    //     cart.map((item) => {
-    //         totalAux = totalAux + item.product.price * item.contador;
-    //     });
-    //     setTotalPrice(totalAux);
-    // };
-
 
     return (
 
@@ -79,7 +74,7 @@ const CartProvider = ({ children }) => {
             clearCart,
             cart,
             totalPrice,
-            totalProductos
+            totalProds
 
         }}
         >

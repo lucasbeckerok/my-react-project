@@ -110,7 +110,7 @@ img {
   max-width: 180px;
   max-height: 180px;
 }
-
+// estilos de itemDetail
 .container_itemDetail { display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 0.3fr 1.7fr;
@@ -131,3 +131,21 @@ img {
   margin: 50px 0px 0px 20px;
   
 }
+//estilos de cart
+.container_cart {  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.2fr 1.8fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "cart__titulo cart__titulo"
+    "cart__list-products cart__form";
+}
+
+.cart__titulo { grid-area: cart__titulo; }
+
+.cart__list-products { grid-area: cart__list-products; }
+
+.cart__form { grid-area: cart__form; }
+
+
