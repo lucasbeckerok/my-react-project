@@ -35,7 +35,7 @@ const CartContainer = () => {
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th>TOTAL</th>
+                                <th>TOTAL : </th>
                                 <th>$ {totalPrice}</th>
                             </tr>
                         
