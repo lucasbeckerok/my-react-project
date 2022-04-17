@@ -140,7 +140,8 @@ img {
 
 .cart__titulo { grid-area: cart__titulo; }
 
-.cart__list-products { grid-area: cart__list-products; }
+.cart__list-products { grid-area: cart__list-products;
+padding: 0px 20px 0px 20px; }
 
 .cart__form { grid-area: cart__form; }
 

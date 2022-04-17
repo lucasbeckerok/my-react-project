@@ -2,6 +2,7 @@ import React from 'react';
 import CartItem from "./CartItem";
 import { useContext } from "react";
 import { cartContext } from "../context/CartContext";
+import { Link } from "react-router-dom";
 
 
 const CartContainer = () => {
@@ -10,9 +11,11 @@ const CartContainer = () => {
 
   return (
             <div className="container_cart">
-                <div className="cart__titulo"><h2>Carrito</h2></div>
+                <div className="cart__titulo">
+                    <h2>Carrito</h2>
+                </div>
                 <div className="cart__list-products">
-                    <h3>Lista de Productos</h3>
+                    <h3>Productos en Carrito</h3>
                     <table>
                     <thead>
                         <tr>
@@ -35,14 +38,21 @@ const CartContainer = () => {
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th>TOTAL : </th>
-                                <th>$ {totalPrice}</th>
+                                <th><h3>Total :</h3> </th>
+                                <th><h3>$ {totalPrice}</h3></th>
                             </tr>
                         
                     </tbody>
                     </table>
                     <div>
-                        <button onClick={clearCart}>Vaciar Carrito</button>
+                        <Link to="/">
+                            <button>
+                                Seguir Comprando
+                            </button>
+                        </Link>
+                    <button onClick={clearCart}>
+                        Vaciar Carrito
+                    </button>
                     </div>
                 </div>
                 <div className="cart__form">
