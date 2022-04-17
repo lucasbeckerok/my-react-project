@@ -73,10 +73,6 @@ footer {
     }
   }
 }
-.carritoWidget {
-  margin:10px;
-  float: right;
-}
 
 ///ARTICULOS
 .cards {
@@ -149,3 +145,21 @@ img {
 .cart__form { grid-area: cart__form; }
 
 
+table {
+  thead{
+    tr{
+      th{
+        background-color:$colorPrimario;
+        color:white;
+        padding:5px;
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        padding:5px;
+      }
+    }	
+  }
+}
