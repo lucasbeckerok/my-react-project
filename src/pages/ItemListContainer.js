@@ -27,7 +27,7 @@ const ItemListContainer = () => {
       const productPromise = new Promise((res,rej) => {
         setTimeout(() => {
           res(productsInitial);
-          }, 2000)
+          }, 1500)
       },)
 
       productPromise

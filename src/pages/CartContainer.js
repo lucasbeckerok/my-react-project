@@ -6,7 +6,7 @@ import { cartContext } from "../context/CartContext";
 
 const CartContainer = () => {
     const useCartContext = useContext(cartContext);
-    const { removeItem, cart, totalPrice } = useCartContext;
+    const { removeItem, cart, totalPrice, clearCart } = useCartContext;
 
   return (
             <div className="container_cart">
@@ -41,6 +41,9 @@ const CartContainer = () => {
                         
                     </tbody>
                     </table>
+                    <div>
+                        <button onClick={clearCart}>Vaciar Carrito</button>
+                    </div>
                 </div>
                 <div className="cart__form">
                     <h3>Form CheckOut</h3>

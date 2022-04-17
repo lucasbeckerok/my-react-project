@@ -13,9 +13,16 @@ export const Cart = () => {
         <div>
             {
             cart.length === 0 ?
-            <button><Link to="/">No hay Items: Volver a la Tienda</Link></button>
+            <div>
+                <h3>No hay Productos en el carrito</h3>
+                <Link to="/">
+                        <button>
+                            Volver a la tienda
+                        </button>
+                </Link>
+            </div>
             : <CartContainer/>
-            } 
+            }
         </div>
     )
 }

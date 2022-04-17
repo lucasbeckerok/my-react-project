@@ -15,6 +15,7 @@ const CartProvider = ({ children }) => {
     }, [cart]);
 
     let cartAux = [];
+
     // addToCart
     const addToCart = (product, contador) => {
         const cartProduct = {product, contador}
@@ -58,6 +59,7 @@ const CartProvider = ({ children }) => {
         setCart([]);
         setTotalPrice(0);
         setTotalProds(0);
+        toast.info(`Se vació correctamente tu carrito`);
     }
 
     //isInCart

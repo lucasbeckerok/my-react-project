@@ -4,7 +4,7 @@ import React from 'react'
 
 const CartItem = (props) => {
     const useCartContext = useContext(cartContext);
-    const { removeItem, totalPrice } = useCartContext; 
+    const { removeItem } = useCartContext; 
 
   return (
             <tr>
@@ -14,9 +14,9 @@ const CartItem = (props) => {
                     </button>
                 </td>
                 <td>
-                    <a>img</a>
+                <img src={props.item.product.img} className="imgCarrito" alt="Foto Producto Carrito"></img>
                 </td>
-                <td>{props.item.product.name}</td>
+                <td>{props.item.product.name} {props.item.product.descripcion}</td>
                 <td>$ {props.item.product.price}</td>
                 <td>{props.item.contador}</td>
                 <td>$ {props.item.product.price * props.item.contador}</td>

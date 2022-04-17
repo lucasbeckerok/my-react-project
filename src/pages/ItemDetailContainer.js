@@ -17,7 +17,7 @@ const ItemDetailContainer = () => {
   
       setTimeout(() => {
         res(productsInitial);
-        }, 2000)
+        }, 1500)
     },)
 
     useEffect(() => {
