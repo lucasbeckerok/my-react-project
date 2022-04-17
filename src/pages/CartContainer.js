@@ -16,12 +16,12 @@ const CartContainer = () => {
                     <table>
                     <thead>
                         <tr>
-                            <th>Eliminar</th>
                             <th></th>
-                            <th>producto</th>
-                            <th>precio</th>
-                            <th>cantidad</th>
-                            <th>subtotal</th>
+                            <th></th>
+                            <th>Producto</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Subtotal</th>
                         </tr>
                     </thead>
                     <tbody>
