@@ -16,9 +16,9 @@ const CartProvider = ({ children }) => {
 
     let cartAux = [];
 
-    // addToCart
     const addToCart = (product, contador) => {
-        const cartProduct = {product, contador}
+
+        const cartProduct = {product, contador};
 
         if (isInCart(product)){
             cartProduct = product.find((item) => item.product === product);
@@ -42,7 +42,6 @@ const CartProvider = ({ children }) => {
         setTotalProds(totalProds);
     }
 
-    //removeItem
     const removeItem = (product) => {
         if(isInCart(product)) {
             cartAux = cart.filter(item => item.product.name !== product.name);
@@ -54,7 +53,6 @@ const CartProvider = ({ children }) => {
         }
     }
 
-    //clearCart
     const clearCart = () => {
         setCart([]);
         setTotalPrice(0);
@@ -62,7 +60,6 @@ const CartProvider = ({ children }) => {
         toast.info(`Se vació correctamente tu carrito`);
     }
 
-    //isInCart
     const isInCart = (product) => {
         return cart && cart.some(item => item.product.id === product.id);
     };

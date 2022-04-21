@@ -28,7 +28,7 @@ const ItemDetail = (props) => {
       <img src={props.object.img} alt="Foto Producto Detalle"></img>
       </div>
       <div className="itemDetail__descripcion">
-        <button onClick={() => { window.history.go(-1) }} >Ir Atrás</button>
+        <button onClick={() => { window.history.go(-1) }} >Volver atrás</button>
         <p><strong>Contenido:</strong> {props.object.descripcion}</p>
         <p><strong>Cantidad disponible: </strong>{props.object.stock} u.</p>
         <p><strong>Precio: </strong>${props.object.price}</p>

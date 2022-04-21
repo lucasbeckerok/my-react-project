@@ -15,6 +15,7 @@ const ItemCount = (props) => {
             setContador(0)
         }
     }
+
     const addToCart = () => {
         props.onAdd(contador)
     }

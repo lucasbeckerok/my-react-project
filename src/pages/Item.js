@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
 
 const Item = (props) => {
-
+  
     return (
-      
       <article className="card">
         <img src={props.img} alt="foto del producto"></img>
         <div className="card__text">

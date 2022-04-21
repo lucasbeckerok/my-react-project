@@ -7,7 +7,6 @@ import CartContainer from "./CartContainer";
 export const Cart = () => {
 
     const {cart} = useContext(cartContext);
-    console.log(cart)
 
     return (
         <div>

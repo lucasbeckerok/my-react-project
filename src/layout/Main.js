@@ -6,7 +6,6 @@ import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { Cart } from "../pages/Cart";
 
-
 const Main = () => {
 
     return (
@@ -17,7 +16,7 @@ const Main = () => {
             <Route path="/item/:id" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
         </Routes>
-        <ToastContainer position="bottom-right" />
+        <ToastContainer position="top-right" />
     </main>
     )
 }

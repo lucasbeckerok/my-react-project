@@ -94,7 +94,6 @@ button {
   border-radius: 5px;
   display: inline-block;
   margin: 5px;
-
 }
 
 #containerDarkToggle {
@@ -106,6 +105,7 @@ img {
   max-width: 180px;
   max-height: 180px;
 }
+
 // estilos de itemDetail
 .container_itemDetail { display: grid;
   grid-template-columns: 1fr 1fr;
@@ -145,7 +145,7 @@ padding: 0px 20px 0px 20px; }
 
 .cart__form { grid-area: cart__form; }
 
-
+// tabla de productos carrito
 table {
   border-collapse: collapse;
   width: 100%;
@@ -168,6 +168,7 @@ table {
   }
 }
 
+//imagen de producto del carrito
 .imgCarrito {
   max-width: 80px;
   max-height: 80px;
