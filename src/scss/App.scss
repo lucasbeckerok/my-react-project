@@ -18,7 +18,6 @@ body,
   text-align: center;
   align-items: center;
   margin-bottom:30px;
-
 }
 
 h1, h2, h3 {
@@ -57,10 +56,6 @@ footer {
     padding:10px 8px 0px 8px;
     border-radius: 5px;
     background-color:#DAF0E9;
-
-  }
-  button {
-    padding:5px;
   }
 }
 
@@ -86,7 +81,6 @@ footer {
   }
 }
 
-///ARTICULOS
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -102,8 +96,10 @@ footer {
 button {
   background-color:$colorTerciario;
   color: $colorSecundario;
-  padding: 3px;
-  border-radius: 5px;
+  box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
+  padding: 8px;
+  border: 2px solid $colorSecundario;
+  border-radius: 10px;
   display: inline-block;
   margin: 10px;
 }
@@ -163,11 +159,15 @@ table {
   border-collapse: collapse;
   width: 100%;
   thead{
+    
     tr{
+      
       th{
         background-color:$colorPrimario;
         color:$colorSecundario;
         padding:5px;
+        border-radius: 10px 10px 0px 0px;
+        
       }
     }
   }
@@ -193,7 +193,7 @@ table {
   padding:5px;
   border-radius: 5px;
   display: inline-block;
-  margin: 5px;
+  margin: 10px;
 }
 
 .formItems{
@@ -226,8 +226,30 @@ table {
   background: #3B5998;
   color: white;
 }
-/* Twitter */
+/* Instagram */
 .fa-instagram {
   background: #E1306C;
   color: white;
+}
+.botonEliminarItem {
+  background-color: red;
+  padding:8px;
+  border-radius: 5px;
+  border: 0px solid;
+}
+.totalContainerCartText {
+  background-color: $colorPrimario;
+  padding:10px;
+  border-radius: 0px 0px 0px 15px;
+  box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
+  color:white;
+  font-size: 18px;
+}
+.totalContainerCartTotal {
+  background-color: $colorPrimario;
+  padding:10px;
+  box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
+  border-radius: 0px 0px 15px 0px;
+  color: white;
+  font-size: 18px;
 }

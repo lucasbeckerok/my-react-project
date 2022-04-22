@@ -9,7 +9,7 @@ const CartItem = (props) => {
   return (
             <tr>
                 <td>
-                    <button onClick={()=> removeItem(props.item.product)}>
+                    <button className="botonEliminarItem"onClick={()=> removeItem(props.item.product)}>
                     X
                     </button>
                 </td>

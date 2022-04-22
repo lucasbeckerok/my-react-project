@@ -16,7 +16,7 @@ const CartContainer = () => {
                     <h2>Carrito</h2>
                 </div>
                 <div className="cart__list-products">
-                    <h3>Productos en Carrito</h3>
+                    <h3> 🛒 Productos en Carrito</h3>
                     <table>
                     <thead>
                         <tr>
@@ -39,8 +39,8 @@ const CartContainer = () => {
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th><p className="totalCartText">Total</p></th>
-                                <th><p className="totalCartText">$ {totalPrice}</p></th>
+                                <th className="totalContainerCartText"><p>Total</p></th>
+                                <th className="totalContainerCartTotal"><p>$ {totalPrice}</p></th>
                             </tr>
                         
                     </tbody>

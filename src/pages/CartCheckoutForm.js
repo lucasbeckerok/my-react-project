@@ -7,10 +7,12 @@ import validator from "validator";
 const CartCheckoutForm = (props) => {
     const useCartContext = useContext(cartContext);
     const { totalPrice, cartCheckout } = useCartContext;
+    
     const [buyerName, setBuyerName] = useState("");
     const [buyerEmail, setBuyerEmail] = useState("");
     const [buyerEmailConf, setBuyerEmailConf] = useState("");
     const [buyerPhone, setBuyerPhone] = useState("");
+
     const [validName, setValidName] = useState(false);
     const [validEmail, setValidEmail] = useState(false);
     const [validEmailConf, setValidEmailConf] = useState(false);
@@ -33,7 +35,10 @@ const CartCheckoutForm = (props) => {
     order.then((res) => {
         const orderId = res.id;
         cartCheckout(orderId);
-        });
+        })
+        .catch((err) => {
+            console.log(err)
+        }) 
     }
 
     const handleNameChange = (e) => {
@@ -62,7 +67,7 @@ const CartCheckoutForm = (props) => {
 
     return (
         <>
-            <h3>Finalizar Compra</h3>
+            <h3> ✅ Finalizar Pedido</h3>
             <div className="formContainer">
             <form>
                 <div>
