@@ -16,7 +16,6 @@ const CartCheckoutForm = (props) => {
     const [validEmailConf, setValidEmailConf] = useState(false);
     const [validPhone, setValidPhone] = useState(false);
 
-
     const handleCheckout = () => {
         const newOrder = {
             buyer: {
@@ -28,12 +27,13 @@ const CartCheckoutForm = (props) => {
             date: serverTimestamp(),
             total: totalPrice
         }
-        const ordersCollection = collection(dbFirebase, "orders");
-        const order = addDoc(ordersCollection, newOrder);
-        order.then((res) => {
-            const orderId = res.id;
-            cartCheckout(orderId);
-        });
+    const ordersCollection = collection(dbFirebase, "orders");
+    const order = addDoc(ordersCollection, newOrder);
+        
+    order.then((res) => {
+        const orderId = res.id;
+        cartCheckout(orderId);
+         });
     }
 
     const handleNameChange = (e) => {
@@ -62,17 +62,29 @@ const CartCheckoutForm = (props) => {
 
     return (
         <>
-            <h3>Checkout Information:</h3>
-            nombre completo<input className="formItems" error={buyerName !== "" && !validName} required variant="filled" label="Full Name" onChange={handleNameChange} value={buyerName} />
-            numero celular<input className="formItems" error={buyerPhone !== "" && !validPhone} required variant="filled" label="Phone Number" onChange={handlePhoneChange} value={buyerPhone} />
-            email<input className="formItems" error={buyerEmail !== "" && !validEmail} required variant="filled" label="Email Address" onChange={handleEmailChange} value={buyerEmail} />
-            confirm email<input className="formItems" error={buyerEmailConf !== "" && !validEmailConf} required variant="filled" label="Confirm Email Address" onChange={handleEmailConfChange} value={buyerEmailConf} />
-            <div>
+            <h3>Finalizar Compra</h3>
+            <div className="formContainer">
+            <form>
                 <div>
-                    <h3>Total a pagar: ${totalPrice}</h3>
+                    <label> Nombre Completo: </label>
+                    <input className="formItems" error={buyerName !== "" && !validName} required variant="filled" label="Full Name" onChange={handleNameChange} value={buyerName} />
                 </div>
                 <div>
-                    <button onClick={handleCheckout} disabled={(!validName || !validEmail || !validEmailConf || !validPhone)}>Realizar compra</button>
+                    <label> Número de Teléfono: </label>
+                    <input className="formItems" error={buyerPhone !== "" && !validPhone} required variant="filled" label="Phone Number" onChange={handlePhoneChange} value={buyerPhone} />
+                </div>
+                <div>
+                    <label> Email: </label>
+                    <input className="formItems" error={buyerEmail !== "" && !validEmail} required variant="filled" label="Email" onChange={handleEmailChange} value={buyerEmail} />
+                </div>
+                <div>
+                    <label> Confirme Email: </label>
+                    <input className="formItems" error={buyerEmailConf !== "" && !validEmailConf} required variant="filled" label="Confirm Email" onChange={handleEmailConfChange} value={buyerEmailConf} />
+                </div>
+            </form>
+                <div>
+                    <p className="totalCartText">Total a pagar: ${totalPrice}</p>
+                    <button onClick={handleCheckout} disabled={(!validName || !validEmail || !validEmailConf || !validPhone)}>Realizar Pedido</button>
                 </div>
             </div>
         </>

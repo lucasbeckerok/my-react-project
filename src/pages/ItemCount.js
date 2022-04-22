@@ -24,7 +24,7 @@ const ItemCount = (props) => {
         <>
         <div id="contador" className="row">
             <button onClick={restar} className="col-3">-</button>
-            <div className="col-3">{contador}</div>
+            <div className="col-3"><h4>{contador}</h4></div>
             <button onClick={sumar} className="col-3">+</button>
             <button onClick={addToCart} className="col-3">Agregar al Carrito</button> 
         </div>

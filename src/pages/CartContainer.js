@@ -39,8 +39,8 @@ const CartContainer = () => {
                                 <th></th>
                                 <th></th>
                                 <th></th>
-                                <th><h3>Total :</h3> </th>
-                                <th><h3>$ {totalPrice}</h3></th>
+                                <th><p className="totalCartText">Total</p></th>
+                                <th><p className="totalCartText">$ {totalPrice}</p></th>
                             </tr>
                         
                     </tbody>
