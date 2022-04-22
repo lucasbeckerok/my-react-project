@@ -65,6 +65,11 @@ const CartProvider = ({ children }) => {
         return cart && cart.some(item => item.product.id === product.id);
     };
 
+    const cartCheckout = (orderId) => {
+        toast.success("Felicitaciones su pedido ha sido completado, su numero de orden es: " + orderId );
+        clearCart();
+    }
+
     return (
 
         <Provider
@@ -74,7 +79,8 @@ const CartProvider = ({ children }) => {
             clearCart,
             cart,
             totalPrice,
-            totalProds
+            totalProds,
+            cartCheckout
 
         }}
         >

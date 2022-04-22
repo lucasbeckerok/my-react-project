@@ -33,7 +33,7 @@ const CartCheckoutForm = (props) => {
     order.then((res) => {
         const orderId = res.id;
         cartCheckout(orderId);
-         });
+        });
     }
 
     const handleNameChange = (e) => {
@@ -67,19 +67,19 @@ const CartCheckoutForm = (props) => {
             <form>
                 <div>
                     <label> Nombre Completo: </label>
-                    <input className="formItems" error={buyerName !== "" && !validName} required variant="filled" label="Full Name" onChange={handleNameChange} value={buyerName} />
+                    <input className="formItems" error={buyerName !== "" && !validName} onChange={handleNameChange} value={buyerName} />
                 </div>
                 <div>
                     <label> Número de Teléfono: </label>
-                    <input className="formItems" error={buyerPhone !== "" && !validPhone} required variant="filled" label="Phone Number" onChange={handlePhoneChange} value={buyerPhone} />
+                    <input className="formItems" error={buyerPhone !== "" && !validPhone} onChange={handlePhoneChange} value={buyerPhone} />
                 </div>
                 <div>
                     <label> Email: </label>
-                    <input className="formItems" error={buyerEmail !== "" && !validEmail} required variant="filled" label="Email" onChange={handleEmailChange} value={buyerEmail} />
+                    <input className="formItems" error={buyerEmail !== "" && !validEmail} onChange={handleEmailChange} value={buyerEmail} />
                 </div>
                 <div>
                     <label> Confirme Email: </label>
-                    <input className="formItems" error={buyerEmailConf !== "" && !validEmailConf} required variant="filled" label="Confirm Email" onChange={handleEmailConfChange} value={buyerEmailConf} />
+                    <input className="formItems" error={buyerEmailConf !== "" && !validEmailConf} onChange={handleEmailConfChange} value={buyerEmailConf} />
                 </div>
             </form>
                 <div>
@@ -90,4 +90,4 @@ const CartCheckoutForm = (props) => {
         </>
     )
 }
-export default CartCheckoutForm
+export default CartCheckoutForm;
