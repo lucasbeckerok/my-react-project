@@ -17,6 +17,8 @@ body,
   font-family: 'Fredoka', sans-serif;
   text-align: center;
   align-items: center;
+  margin-bottom:30px;
+
 }
 
 h1, h2, h3 {
@@ -30,14 +32,15 @@ main {
 }
 
 footer {
-  padding-bottom: 15px;
-  padding-top:2px;
-  left: 0;
+  padding-bottom: 5px;
+  padding-top:5px;
   bottom: 0;
   width: 100%;
   background-color: $colorPrimario;
   color: white;
   text-align: center;
+  position: fixed;
+  height: 70px;
 }
 
 #itemStore {
