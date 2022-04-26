@@ -93,6 +93,9 @@ footer {
   border-radius: 10px;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 } 
+.card:hover{
+  box-shadow: 5px 5px 5px 5px  rgba(255, 137, 2, 0.678);
+}
 
 button {
   background-color:$colorTerciario;
@@ -167,6 +170,7 @@ table {
   margin: 10px;
 }
 
+// estilo del form checkout
 .formItems{
   margin:10px;
 }
@@ -275,5 +279,43 @@ table {
     transform: rotate(360deg);
   }	
 }
-
 // form login and signup
+.formContainer_login-signup{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.form_login-signup {
+  background-color: $colorPrimario;
+  box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
+  padding: 15px;
+  margin-bottom: 20px;
+  margin-top:3%;
+  border-radius: 15px;
+  label {
+    position: block;
+    display:block;
+    font-size: 18px;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size:18px;
+  }
+}
+//user page
+.container_user-page {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.user-page{
+  background-color: $colorPrimario;
+  box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
+  padding: 15px;
+  margin-top: 3%;
+  border-radius: 15px;
+}

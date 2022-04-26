@@ -15,14 +15,13 @@ const User = () => {
   }
 
   return (
-    <div>
-
-      <h2>Informacion de tu Cuenta: </h2>
-      <p>Email: {user.email}</p>
-      <p>ID: {user.uid}</p>
-
-      <Link to= "/"><button onClick={cerrarSesion}>Cerrar Sesión</button></Link>
-
+    <div className="container_user-page">
+      <div className="user-page">
+        <h2>Informacion de tu Cuenta: </h2>
+        <p>Email: {user.email}</p>
+        <p>ID: {user.uid}</p>
+        <Link to="/"><button onClick={cerrarSesion}>Cerrar Sesión</button></Link>
+      </div>
     </div>
   )
 }
