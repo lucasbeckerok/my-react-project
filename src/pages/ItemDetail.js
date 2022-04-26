@@ -23,7 +23,7 @@ const ItemDetail = (props) => {
     <div>
       <div className="backButtonAndTitle">
         <button onClick={() => { window.history.go(-1) }} className="backButtonAndTitle__item1">
-          Volver Atrás
+          Ir Atrás
         </button>
         <h2 className="backButtonAndTitle__item2">
           {props.object.name}

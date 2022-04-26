@@ -26,9 +26,6 @@ h1, h2, h3 {
 p {
   margin:5px;
 }
-main {
-  padding:5px;
-}
 
 footer {
   padding-bottom: 5px;
@@ -39,7 +36,7 @@ footer {
   color: white;
   text-align: center;
   position: fixed;
-  height: 70px;
+  height: 85px;
 }
 
 #itemStore {
@@ -59,27 +56,27 @@ footer {
   }
 }
 
-//navBar
-.navBar {
-  ul {
-    list-style-type:none;
-    overflow:hidden;
-    background-color:$colorPrimario;
-    li {
-      float: left;
-      a {
-        display:block;
-        color: black;
-        text-align: center;
-        padding:15px 17px;
-        text-decoration:none;
-      }
-      a:hover{
-        background-color:$colorSecundario;
-      }
-    }
-  }
-}
+// //navBar
+// .navBar {
+//   ul {
+//     list-style-type:none;
+//     overflow:hidden;
+//     background-color:$colorPrimario;
+//     li {
+//       float: left;
+//       a {
+//         display:block;
+//         color: black;
+//         text-align: center;
+//         padding:15px 17px;
+//         text-decoration:none;
+//       }
+//       a:hover{
+//         background-color:$colorSecundario;
+//       }
+//     }
+//   }
+// }
 
 .cards {
   display: flex;
@@ -87,7 +84,7 @@ footer {
   align-items: stretch;
 }
 .card {
-  flex: 0 0 200px;
+  flex: 0 0 170px;
   margin: 8px;
   border: 1px solid #ccc;
   border-radius: 10px;
@@ -109,17 +106,15 @@ button {
 }
 
 img {
-  max-width: 180px;
-  max-height: 180px;
+  max-width: 165px;
+  max-height: 165px;
 }
 
 // estilos item detail
 .backButtonAndTitle {
   display:flex;
   justify-content: space-around;
-}
-.backButtonAndTitle__item3 {
-  padding:5px;
+  margin-top:10px;
 }
 .container_itemDetail {
   display:flex;
@@ -148,7 +143,7 @@ table {
   tbody{
     tr{
       td{
-        padding:5px;
+        padding:2px;
         border: 1px solid #ccc;
       }
     }	
@@ -157,8 +152,8 @@ table {
 
 //imagen de producto del carrito
 .imgCarrito {
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .totalCartText {
@@ -240,7 +235,7 @@ table {
 
 //styles table cart products
 .cart__list-products {
-  margin: 20px;
+  margin: 5px;
 }
 
 //container botones cart
@@ -284,6 +279,7 @@ table {
   display:flex;
   align-items:center;
   justify-content:center;
+  margin: 20px;
 }
 .form_login-signup {
   background-color: $colorPrimario;
@@ -318,4 +314,56 @@ table {
   padding: 15px;
   margin-top: 3%;
   border-radius: 15px;
+}
+
+//navBar
+.topnav {
+  overflow: hidden;
+  background-color: $colorPrimario;
+}
+.topnav_home{
+  background-color: $colorTerciario;
+}
+.topnav li {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav li:hover {
+  background-color: $colorTerciario;
+  color: white;
+}
+.topnav .icon {
+  display: none;
+}
+.topnav_carrito {
+  display:none;
+}
+@media screen and (max-width: 600px) {
+  .topnav li:not(:first-child) {
+    display: none;
+  }
+  .topnav li .icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive li {
+    float: none;
+    display: block;
+    text-align: left;
+  }
 }

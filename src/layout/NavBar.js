@@ -1,5 +1,5 @@
 import CartWidget from "../widgets/CartWidget";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { cartContext } from "../context/CartContext";
 import { authContext } from "../context/AuthContext"
 import React, { useContext } from 'react';
@@ -10,43 +10,36 @@ const NavBar = () => {
   const { cart } = useCartContext;
   const { usuario } = useAuthContext;
 
-    return (
-      <nav className="navBar">
-        <ul>
-          <li>
-            <NavLink to="/">
-            <h4>Hanno | Kiosco Online</h4>
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/categoria/bebidas">
-              Bebidas
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/categoria/snacks">
-              Snacks
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/categoria/chocolates">
-              Chocolates
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/categoria/cigarrillos">
-              Cigarrillos
-            </NavLink>
-          </li>
-          <li>
-            { usuario != null ? <NavLink to="/user">Mi Cuenta</NavLink> : <NavLink to="/signup">Registrate</NavLink>}
-          </li>
-          <li>
-            { cart.length === 0 ? null : <NavLink to="/cart"><CartWidget/></NavLink> }
-          </li>
-       </ul>
-      </nav>
-    )
+  return (
+
+    <ul className="topnav" id="myTopnav">
+
+      <NavLink to="/" style={{ textDecoration: 'none' }}>
+        <li className="topnav_home"><h4>Hanno | Kiosco Online</h4></li>
+      </NavLink>
+
+      <NavLink to="/categoria/bebidas" style={{ textDecoration: 'none' }}>
+        <li>Bebidas</li>
+      </NavLink>
+
+      <NavLink to="/categoria/snacks" style={{ textDecoration: 'none' }}>
+        <li>Snacks</li>
+      </NavLink>
+
+      <NavLink to="/categoria/chocolates" style={{ textDecoration: 'none' }}>
+        <li>Chocolates</li>
+      </NavLink>
+
+      <NavLink to="/categoria/cigarrillos" style={{ textDecoration: 'none' }}>
+        <li>Cigarrillos</li>
+      </NavLink>
+
+      {usuario != null ? <NavLink to="/user" style={{ textDecoration: 'none' }}><li>Mi Cuenta</li></NavLink> : <NavLink to="/signup" style={{ textDecoration: 'none' }}><li>Registrate</li></NavLink>}
+
+      {cart.length === 0 ? null : <NavLink to="/cart" style={{ textDecoration: 'none' }}><li className="topnav_carrito"><CartWidget /></li></NavLink>}
+
+    </ul>
+  )
 }
 
 export default NavBar;
