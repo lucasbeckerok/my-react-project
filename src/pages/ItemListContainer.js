@@ -52,7 +52,7 @@ const ItemListContainer = () => {
     return (
         <>
         <div>
-          {loading ? <h2>Cargando Productos...</h2> : <div className="cards"><ItemList products={products} /></div>}
+          {loading ? <div className="container-spinner"><div className="spinner"></div></div> : <div className="cards"><ItemList products={products} /></div>}
           {error && <h2>ha ocurrido un error al cargar la pagina</h2>}
         </div>
         </>

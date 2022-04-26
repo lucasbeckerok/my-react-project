@@ -4,9 +4,9 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useContext, useState, useEffect } from 'react';
 import validator from "validator";
 
-const CartCheckoutForm = (props) => {
+const CartCheckout = () => {
     const useCartContext = useContext(cartContext);
-    const { totalPrice, cartCheckout } = useCartContext;
+    const { totalPrice, cartCheckout, cart} = useCartContext;
     
     const [buyerName, setBuyerName] = useState("");
     const [buyerEmail, setBuyerEmail] = useState("");
@@ -25,7 +25,7 @@ const CartCheckoutForm = (props) => {
                 phone: buyerPhone,
                 email: buyerEmail
             },
-            items: props.cart,
+            items: cart,
             date: serverTimestamp(),
             total: totalPrice
         }
@@ -40,7 +40,7 @@ const CartCheckoutForm = (props) => {
             console.log(err)
         }) 
     }
-
+    
     const handleNameChange = (e) => {
         setBuyerName(e.target.value);
     }
@@ -95,4 +95,4 @@ const CartCheckoutForm = (props) => {
         </>
     )
 }
-export default CartCheckoutForm;
+export default CartCheckout;

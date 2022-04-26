@@ -1,11 +1,14 @@
 import CartWidget from "../widgets/CartWidget";
 import { NavLink } from "react-router-dom";
-import { useContext } from "react";
 import { cartContext } from "../context/CartContext";
+import { authContext } from "../context/AuthContext"
+import React, { useContext } from 'react';
 
 const NavBar = () => {
   const useCartContext = useContext(cartContext);
+  const useAuthContext = useContext(authContext);
   const { cart } = useCartContext;
+  const { usuario } = useAuthContext;
 
     return (
       <nav className="navBar">
@@ -36,9 +39,10 @@ const NavBar = () => {
             </NavLink>
           </li>
           <li>
-            {cart.length === 0 ? null : <NavLink to="/cart">
-              <CartWidget/>
-            </NavLink>}
+            { usuario != null ? <NavLink to="/user">Mi Cuenta</NavLink> : <NavLink to="/signup">Registrate</NavLink>}
+          </li>
+          <li>
+            { cart.length === 0 ? null : <NavLink to="/cart"><CartWidget/></NavLink> }
           </li>
        </ul>
       </nav>

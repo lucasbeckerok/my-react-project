@@ -4,18 +4,21 @@ import Footer from "../layout/Footer"
 import CartProvider from "../context/CartContext";
 import '../scss/App.scss';
 import { BrowserRouter } from "react-router-dom";
+import AuthProvider from "../context/AuthContext";
 
 function App() {
 
     return (
         <>
-        <CartProvider>
-            <BrowserRouter>
-              <Header/>
-              <Main/>
-              <Footer/>
-            </BrowserRouter>
-        </CartProvider>
+            <AuthProvider>
+                <CartProvider>
+                    <BrowserRouter>
+                        <Header />
+                        <Main />
+                        <Footer />
+                    </BrowserRouter>
+                </CartProvider>
+            </AuthProvider>
         </>
     )
 }

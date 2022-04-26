@@ -9,7 +9,6 @@ const CartProvider = ({ children }) => {
     const [totalPrice, setTotalPrice] = useState(0);
     const [totalProds, setTotalProds] = useState(0);
 
-    
     useEffect(() => {
         setCart(cart);
         calcularTotal(cart);

@@ -90,6 +90,7 @@ footer {
   flex: 0 0 200px;
   margin: 8px;
   border: 1px solid #ccc;
+  border-radius: 10px;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 } 
 
@@ -97,16 +98,11 @@ button {
   background-color:$colorTerciario;
   color: $colorSecundario;
   box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
-  padding: 8px;
-  border: 2px solid $colorSecundario;
+  padding: 10px;
+  border: 0px solid $colorSecundario;
   border-radius: 10px;
   display: inline-block;
   margin: 10px;
-}
-
-#containerDarkToggle {
-  padding:10px;
-  background-color:darkgray;
 }
 
 img {
@@ -114,45 +110,20 @@ img {
   max-height: 180px;
 }
 
-// estilos de itemDetail
-.container_itemDetail { display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.3fr 1.7fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "itemDetail__titulo itemDetail__titulo"
-    "itemDetail__img itemDetail__descripcion";
-
-} .itemDetail__titulo { grid-area: itemDetail__titulo;
-
-} .itemDetail__img { grid-area: itemDetail__img;
-  text-align:right;
-  margin:20px;
-
-} .itemDetail__descripcion { grid-area: itemDetail__descripcion;
-  text-align: left;
-  margin: 50px 0px 0px 20px;
-  
+// estilos item detail
+.backButtonAndTitle {
+  display:flex;
+  justify-content: space-around;
 }
-//estilos de cart
-.container_cart {  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 0.2fr 1.8fr;
-  gap: 0px 0px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    "cart__titulo cart__titulo"
-    "cart__list-products cart__form";
+.backButtonAndTitle__item3 {
+  padding:5px;
 }
-
-.cart__titulo { grid-area: cart__titulo; }
-
-.cart__list-products { grid-area: cart__list-products;
-padding: 0px 20px 0px 20px; }
-
-.cart__form { grid-area: cart__form; 
-padding: 0px 20px 0px 20px; }
+.container_itemDetail {
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin:50px;
+}
 
 // tabla de productos carrito
 table {
@@ -208,7 +179,7 @@ table {
   border-radius: 15px;
 }
 
-/* estilos botones iconos sociales del footer */
+// estilos botones iconos sociales del footer
 .fa {
   padding: 5px;
   margin:5px;
@@ -221,16 +192,18 @@ table {
 .fa:hover {
   opacity: 0.7;
 }
-/* Facebook */
+// Facebook
 .fa-facebook {
   background: #3B5998;
   color: white;
 }
-/* Instagram */
+// Instagram
 .fa-instagram {
   background: #E1306C;
   color: white;
 }
+
+//styles cart
 .botonEliminarItem {
   background-color: red;
   padding:8px;
@@ -239,17 +212,68 @@ table {
 }
 .totalContainerCartText {
   background-color: $colorPrimario;
-  padding:10px;
+  padding:5px;
   border-radius: 0px 0px 0px 15px;
   box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
   color:white;
-  font-size: 18px;
+  font-size: 17px;
 }
 .totalContainerCartTotal {
   background-color: $colorPrimario;
-  padding:10px;
+  padding:5px;
   box-shadow: 5px 5px 10px 0px  rgba(0,0,0,0.3);
   border-radius: 0px 0px 15px 0px;
   color: white;
-  font-size: 18px;
+  font-size: 17px;
 }
+
+//navbar styles login
+.loginNavBar {
+  background-color: $colorTerciario;
+  border-radius: 15px;
+  padding: 0px;
+}
+
+//styles table cart products
+.cart__list-products {
+  margin: 20px;
+}
+
+//container botones cart
+.containerBotonesCart{
+  display:flex;
+  justify-content: space-evenly;
+  margin: 40px 0px;
+}
+.botonCartClear {
+  background-color:red;
+}
+.botonCartFinalizar {
+  background-color:green;
+}
+
+// spinner cargando
+.container-spinner{
+  display:flex;
+}
+.spinner {
+  border: 8px solid rgba(0, 0, 0, .1);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border-left-color: $colorPrimario;
+  animation: spin 1s ease infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }	
+}
+
+// form login and signup
