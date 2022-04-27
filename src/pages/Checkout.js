@@ -3,10 +3,10 @@ import { cartContext } from "../context/CartContext";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useContext, useState, useEffect } from 'react';
 import { getAuth } from "firebase/auth";
-import CartItem from "../pages/CartItem";
+import CartItemCheckout from "../pages/CartItemCheckout";
 import ItemListContainer from "./ItemListContainer"
 
-const CartCheckout = () => {
+const CartCheckout = (props) => {
     const useCartContext = useContext(cartContext);
 
     const auth = getAuth();
@@ -45,22 +45,20 @@ const CartCheckout = () => {
         pedidoFinalizado ? 
         <ItemListContainer/>
         :
-            <div>
-
-                <div>
-                    <h2>Finalizar Pedido</h2>
-                    <p>Porfavor revise los datos a continuacion:</p>
-                    <h3>Informacion de tu cuenta:</h3>
-                    <p>Email: {user.email}</p>
-                    <p>ID: {user.uid}</p>
+            <div className="containerCheckout">
+                <h2>Finalizar Pedido</h2>
+                <p>Porfavor revise los datos a continuacion:</p>
+                <h3>Informacion de tu cuenta:</h3>
+                <div className="userInformationCheckout">
+                    
+                    <p><strong>Email:</strong> {user.email}</p>
+                    <p><strong>ID: </strong> {user.uid}</p>
                 </div>
                 <div>
                     <h3>Tu pedido:</h3>
                     <table>
                         <thead>
                             <tr>
-                                <th></th>
-                                <th></th>
                                 <th>Producto</th>
                                 <th>Precio</th>
                                 <th>Cantidad</th>
@@ -69,24 +67,15 @@ const CartCheckout = () => {
                         </thead>
                         <tbody>
                             {cart.map(item => (
-                                <CartItem key={item.product.id} item={item} removeItem={removeItem} />
+                                <CartItemCheckout key={item.product.id} item={item} />
                             ))}
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th></th>
-                                <th className="totalContainerCartText"><p>Total</p></th>
-                                <th className="totalContainerCartTotal"><p>$ {totalPrice}</p></th>
-                            </tr>
-
                         </tbody>
                     </table>
 
                     <div>
                         <p className="totalCartText">Total a pagar: ${totalPrice}</p>
-                        <button onClick={handleCheckout}>Confirmar Pedido</button>
                     </div>
+                    <button onClick={handleCheckout}> ✅ Confirmar Compra</button>
                 </div>
             </div>
         }
