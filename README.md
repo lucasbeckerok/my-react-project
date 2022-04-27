@@ -17,5 +17,6 @@ Para la gestion de base de datos, registro y toma de pedidos, se utilizó Authen
 ![](/public/img/13-56-35_AdobeCreativeCloudExpress.gif)
 
 ### Link:
-Espero que la Distrutes!
 * [Hanno Kiosco | Tienda Online ](https://my-react-project-lu7ctg6er-lucasbeckerok.vercel.app/)
+
+Espero que la Distrutes! :)
