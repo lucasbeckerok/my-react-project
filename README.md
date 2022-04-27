@@ -5,10 +5,6 @@ Este es mi proyecto final del curso de React de Coderhouse, consiste en una apli
 Utilicé la menor cantidad de frameworks para obtener el mayor rendimiento posible en la aplicación.
 Para la gestion de base de datos, registro y toma de pedidos, se utilizó Authentication y Database de Firestore.
 
-Espero que la Distrutes!
-
-Link al Proyecto: https://my-react-project-lu7ctg6er-lucasbeckerok.vercel.app/
-
 ### Frameworks y Tools utilizados:
 
 * [node-sass v7.0.1](https://www.npmjs.com/package/sass)
@@ -16,6 +12,10 @@ Link al Proyecto: https://my-react-project-lu7ctg6er-lucasbeckerok.vercel.app/
 * [react-toastify v8.2.0](https://www.npmjs.com/package/react-toastify)
 * [firebase v9.6.11](https://firebase.google.com/)
 
-## Previsualizacion del proyecto:
+### Previsualizacion (gif):
 
 ![](/public/img/13-56-35_AdobeCreativeCloudExpress.gif)
+
+### Link:
+Espero que la Distrutes!
+* [Hanno Kiosco | Tienda Online ](https://my-react-project-lu7ctg6er-lucasbeckerok.vercel.app/)
