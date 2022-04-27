@@ -11,9 +11,11 @@ Link al Proyecto: https://my-react-project-lu7ctg6er-lucasbeckerok.vercel.app/
 
 ### Frameworks y Tools utilizados:
 
-* [node-sass v7.0.1]()
-* [react-router-dom v6.2.2]()
-* [react-toastify v8.2.0]()
-* [firebase v9.6.11]()
+* [node-sass v7.0.1](https://www.npmjs.com/package/sass)
+* [react-router-dom v6.2.2](https://www.npmjs.com/package/react-router-dom)
+* [react-toastify v8.2.0](https://www.npmjs.com/package/react-toastify)
+* [firebase v9.6.11](https://firebase.google.com/)
+
+## Previsualizacion del proyecto:
 
 ![](/public/img/13-56-35_AdobeCreativeCloudExpress.gif)
