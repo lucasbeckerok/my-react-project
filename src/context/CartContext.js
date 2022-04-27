@@ -21,9 +21,8 @@ const CartProvider = ({ children }) => {
         const cartProduct = {product, contador};
 
         if (isInCart(product)){
-            cartProduct = product.find((item) => item.product === product);
+            cartProduct = product.find((item) => item.product.id === product.id);
             cartProduct.contador = cartProduct.contador + contador;
-            cartAux = [...cart];
         } else {
             cartAux = [cartProduct, ...cart];
             toast.success("Agregaste " + contador + " productos al carrito!");
@@ -57,7 +56,6 @@ const CartProvider = ({ children }) => {
         setCart([]);
         setTotalPrice(0);
         setTotalProds(0);
-        toast.info(`Se vació correctamente tu carrito`);
     }
 
     const isInCart = (product) => {
@@ -80,7 +78,6 @@ const CartProvider = ({ children }) => {
             totalPrice,
             totalProds,
             cartCheckout
-
         }}
         >
             {children}

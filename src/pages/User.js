@@ -16,12 +16,13 @@ const User = () => {
 
   return (
     <div className="container_user-page">
-      <div className="user-page">
-        <h2>Informacion de tu Cuenta: </h2>
-        <p>Email: {user.email}</p>
-        <p>ID: {user.uid}</p>
-        <Link to="/"><button onClick={cerrarSesion}>Cerrar Sesión</button></Link>
+      <Link to="/"><button>Ir a Inicio</button></Link>
+      <h2>Informacion de tu Cuenta: </h2>
+      <div className="user-page">  
+        <p><strong>Email: </strong>{user.email}</p><br></br>
+        <p><strong>ID: </strong>{user.uid}</p>
       </div>
+      <Link to="/"><button onClick={cerrarSesion}>Cerrar Sesión</button></Link>
     </div>
   )
 }

@@ -8,11 +8,11 @@ import { Link } from "react-router-dom";
 const CartContainer = (props) => {
     const useCartContext = useContext(cartContext);
     const { removeItem, cart, totalPrice, clearCart } = useCartContext;
-    const { usuario} = useContext(authContext);
+    const { usuario } = useContext(authContext);
 
     return (
         <div className="cart__list-products">
-            <h2> 🛒 Carrito</h2>
+            <h2>🛒 Carrito</h2>
             <table>
                 <thead>
                     <tr>
@@ -45,12 +45,12 @@ const CartContainer = (props) => {
                 </button>
                 <Link to="/">
                     <button>
-                    🛍️ Seguir Comprando
+                        🛍️ Seguir Comprando
                     </button>
                 </Link>
-                { usuario != null ?
-                <Link to="/checkout"><button className="botonCartFinalizar">☑️ Finalizar Pedido</button></Link>
-                : <Link to="/signup"><button className="botonCartFinalizar">☑️ Registrarme y Finalizar Pedido</button></Link>
+                {usuario != null ?
+                    <Link to="/checkout"><button className="botonCartFinalizar">☑️ Finalizar Pedido</button></Link>
+                    : <Link to="/signup"><button className="botonCartFinalizar">☑️ Registrarme y Finalizar Pedido</button></Link>
                 }
             </div>
         </div>

@@ -24,7 +24,7 @@ const Main = () => {
             <Route path="/user" element={<User />} />
             <Route path="/checkout" element={<Checkout />} />
         </Routes>
-        <ToastContainer position="top-right" />
+        <ToastContainer position="bottom-center" />
     </main>
     )
 }
