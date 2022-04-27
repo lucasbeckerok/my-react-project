@@ -2,9 +2,9 @@ import { dbFirebase } from "../FirebaseConfig";
 import { cartContext } from "../context/CartContext";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { useContext, useState, useEffect } from 'react';
-import validator from "validator";
 import { getAuth } from "firebase/auth";
 import CartItem from "../pages/CartItem";
+import ItemListContainer from "./ItemListContainer"
 
 const CartCheckout = () => {
     const useCartContext = useContext(cartContext);
@@ -12,25 +12,14 @@ const CartCheckout = () => {
     const auth = getAuth();
     const user = auth.currentUser;
 
-
     const { totalPrice, cartCheckout, cart, removeItem } = useCartContext;
 
-    const [buyerName, setBuyerName] = useState("");
-    const [buyerEmail, setBuyerEmail] = useState("");
-    const [buyerEmailConf, setBuyerEmailConf] = useState("");
-    const [buyerPhone, setBuyerPhone] = useState("");
-
-    const [validName, setValidName] = useState(false);
-    const [validEmail, setValidEmail] = useState(false);
-    const [validEmailConf, setValidEmailConf] = useState(false);
-    const [validPhone, setValidPhone] = useState(false);
+    const [pedidoFinalizado, setPedidoFinalizado] = useState(false);
 
     const handleCheckout = () => {
         const newOrder = {
             buyer: {
-                name: buyerName,
-                phone: buyerPhone,
-                email: buyerEmail
+                email: user.email
             },
             items: cart,
             date: serverTimestamp(),
@@ -42,39 +31,20 @@ const CartCheckout = () => {
         order.then((res) => {
             const orderId = res.id;
             cartCheckout(orderId);
+            setPedidoFinalizado(true);
         })
             .catch((err) => {
                 console.log(err)
             })
     }
 
-    const handleNameChange = (e) => {
-        setBuyerName(e.target.value);
-    }
-
-    const handleEmailChange = (e) => {
-        setBuyerEmail(e.target.value);
-    }
-
-    const handleEmailConfChange = (e) => {
-        setBuyerEmailConf(e.target.value);
-    }
-
-    const handlePhoneChange = (e) => {
-        setBuyerPhone(e.target.value);
-    }
-
-    useEffect(() => {
-        setValidName(validator.isAlpha(buyerName, "es-ES", { ignore: " " }));
-        setValidEmail(validator.isEmail(buyerEmail));
-        setValidEmailConf(validator.equals(buyerEmail, buyerEmailConf));
-        setValidPhone(validator.isNumeric(buyerPhone, "es-ES"));
-    }, [buyerName, buyerEmail, buyerEmailConf, buyerPhone]);
-
-
     return (
         <>
 
+        { 
+        pedidoFinalizado ? 
+        <ItemListContainer/>
+        :
             <div>
 
                 <div>
@@ -119,6 +89,7 @@ const CartCheckout = () => {
                     </div>
                 </div>
             </div>
+        }
         </>
     )
 }

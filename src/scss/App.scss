@@ -56,28 +56,6 @@ footer {
   }
 }
 
-// //navBar
-// .navBar {
-//   ul {
-//     list-style-type:none;
-//     overflow:hidden;
-//     background-color:$colorPrimario;
-//     li {
-//       float: left;
-//       a {
-//         display:block;
-//         color: black;
-//         text-align: center;
-//         padding:15px 17px;
-//         text-decoration:none;
-//       }
-//       a:hover{
-//         background-color:$colorSecundario;
-//       }
-//     }
-//   }
-// }
-
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -315,6 +293,27 @@ table {
   margin-top: 3%;
   border-radius: 15px;
 }
+
+// .navBar {
+//   ul {
+//     list-style-type:none;
+//     overflow:hidden;
+//     background-color:$colorPrimario;
+//     li {
+//       float: left;
+//       a {
+//         display:block;
+//         color: black;
+//         text-align: center;
+//         padding:15px 17px;
+//         text-decoration:none;
+//       }
+//       a:hover{
+//         background-color:$colorSecundario;
+//       }
+//     }
+//   }
+// }
 
 //navBar
 .topnav {

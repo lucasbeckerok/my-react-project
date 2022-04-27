@@ -13,7 +13,6 @@ const AuthProvider = ({ children }) => {
     const [logueado, setLogueado] = useState(false);
     const [usuarioCreado, setUsuarioCreado] = useState(false);
     
-
     const auth = getAuth();
 
     useEffect(()=>{
