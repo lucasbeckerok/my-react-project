@@ -36,6 +36,11 @@ footer {
   text-align: center;
   position: fixed;
   height: 85px;
+  ul {
+    li {
+      text-decoration: none;
+    }
+  }
 }
 
 #itemStore {
