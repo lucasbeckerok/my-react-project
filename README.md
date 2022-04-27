@@ -1,7 +1,8 @@
 # Proyecto Ecommerce Kiosco
 
 ## Sobre el Proyecto:
-Este es mi proyecto final del curso de React de Coderhouse, consiste en una aplicacion web de tienda de productos de almacén y kiosco, donde es posible realizar pedidos de manera online, desde la computadora, tablet o celular (responsive). Para el funcionamiento de la aplicacion se utilizaron herramientas propias de JS y React como use hooks, use context y use state. Se intentó usar la menor cantidad de frameworks para un mayor rendimiento en la aplicación.
+Este es mi proyecto final del curso de React de Coderhouse, consiste en una aplicacion web de tienda de productos de almacén y kiosco, donde es posible realizar pedidos de manera online, desde la computadora, tablet o celular (responsive). Para el funcionamiento de la aplicacion se utilizaron herramientas propias de JS y React como use hooks, use context y use state. 
+Utilicé la menor cantidad de frameworks para obtener el mayor rendimiento posible en la aplicación.
 Para la gestion de base de datos, registro y toma de pedidos, se utilizó Authentication y Database de Firestore.
 
 Espero que la Distrutes!
