@@ -1,9 +1,6 @@
 import React, { useContext } from 'react';
 import { Link } from "react-router-dom";
 import { authContext } from "../context/AuthContext";
-import { cartContext } from "../context/CartContext";
-import Checkout from "../pages/Checkout";
-import User from "./User";
 import BeforeRegister from "./BeforeRegister";
 
 const SignUp = () => {

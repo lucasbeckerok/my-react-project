@@ -6,7 +6,7 @@ const ItemCount = (props) => {
 
     const sumar = () => {
         if (contador < props.stock) {
-        setContador(contador + 1)
+            setContador(contador + 1)
         }
     }
     const restar = () => {
@@ -22,12 +22,12 @@ const ItemCount = (props) => {
 
     return (
         <>
-        <div id="contador" className="row">
-            <button onClick={restar} className="col-3">-</button>
-            <div className="col-3"><h4>{contador}</h4></div>
-            <button onClick={sumar} className="col-3">+</button>
-            <button onClick={addToCart} className="col-3">Agregar al Carrito</button> 
-        </div>
+            <div id="contador" className="row">
+                <button onClick={restar} className="col-3">-</button>
+                <div className="col-3"><h4>{contador}</h4></div>
+                <button onClick={sumar} className="col-3">+</button>
+                <button onClick={addToCart} className="col-3">Agregar al Carrito</button>
+            </div>
         </>
     )
 }

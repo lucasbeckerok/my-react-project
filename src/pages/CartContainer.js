@@ -5,7 +5,7 @@ import { cartContext } from "../context/CartContext";
 import { authContext } from "../context/AuthContext";
 import { Link } from "react-router-dom";
 
-const CartContainer = (props) => {
+const CartContainer = () => {
     const useCartContext = useContext(cartContext);
     const { removeItem, cart, totalPrice, clearCart } = useCartContext;
     const { usuario } = useContext(authContext);

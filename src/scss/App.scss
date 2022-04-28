@@ -236,6 +236,9 @@ table {
 // spinner cargando
 .container-spinner{
   display:flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content:center;
 }
 .spinner {
   border: 8px solid rgba(0, 0, 0, .1);
@@ -244,9 +247,7 @@ table {
   border-radius: 50%;
   border-left-color: $colorPrimario;
   animation: spin 1s ease infinite;
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  margin-top:250px;
 }
 @keyframes spin {
   0% {

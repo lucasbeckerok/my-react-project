@@ -20,7 +20,7 @@ const CartCheckout = () => {
         const newOrder = {
             buyer: {
                 email: user.email,
-                id : user.uid
+                id: user.uid
             },
             items: cart,
             date: serverTimestamp(),
@@ -72,7 +72,6 @@ const CartCheckout = () => {
                                     ))}
                                 </tbody>
                             </table>
-
                             <div>
                                 <p className="totalCartText">Total a pagar: ${totalPrice}</p>
                             </div>
